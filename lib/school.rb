@@ -19,11 +19,10 @@ class School
     end
 
     def sort
-        new_roster = {}
-        @roster.each do |grade, students|
-          new_roster[grade] = students.sort
+        @roster.map do |grade, students|
+          grade = students.sort
         end
-        new_roster
+        @roster
     end
 
 
